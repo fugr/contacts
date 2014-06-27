@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>07 电信</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+  </head>
+  <body>
+	<div class="container" style="width: 1000px;">
+	    <div class="page-header">
+	        <h1>修改通讯录</h1>
+	    </div>
+		<form role="form" method="POST" action="/">
+		  <div class="form-group">
+		  	<div class="col-xs-3">
+		    	<input type="text" class="form-control" name="Id" value="{{.Id}}">
+		    	<input type="text" class="form-control" name="Name" placeholder="{{.Name}}"> 
+		    	<input type="text" class="form-control" name="Telephone" placeholder="{{.Telephone}}">		    
+		    	<input type="text" class="form-control" name="Address" placeholder="{{.Address}}">
+				<input type="hidden" name="op" value="add">
+		    	<button type="submit" class="btn btn-primary btn-lg">确  定</button>
+		    </div>
+		  </div>
+		</form>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
