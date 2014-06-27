@@ -111,7 +111,7 @@ func Get(id int64) *Contact {
 
 func SaveContacts(list Contacts) {
 	filename := "logs/contacts.log"
-	file, err := os.Open(filename)
+	file, err := os.OpenFile(filename, os.O_WRONLY, 777)
 	if err != nil {
 		fmt.Println(err)
 		panic(err)

@@ -29,7 +29,6 @@ func StaticServer(w http.ResponseWriter, req *http.Request) {
 }
 */
 func main() {
-
 	beego.Get("/download", func(ctx *context.Context) {
 		buffer := models.WriteToVCF()
 		ctx.Output.Body(buffer.Bytes())
