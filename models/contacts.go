@@ -54,12 +54,13 @@ func NewContacts() Contacts {
 	}
 	defer file.Close()
 
-	encoder := json.NewDecoder(file)
+	decoder := json.NewDecoder(file)
 	var list Contacts
-	err = encoder.Decode(&list)
+	err = decoder.Decode(&list)
 	if err != nil {
-		panic(err)
+		panic("decoder " + err.Error())
 	}
+	fmt.Println("read contacts init done!")
 	return list
 }
 
